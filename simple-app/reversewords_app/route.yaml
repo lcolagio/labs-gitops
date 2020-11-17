@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: reverse-words
+spec:
+#  host: reverse-words.2886795274-80-jago05.environments.katacoda.com
+  port:
+    targetPort: http
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: reverse-words
+    weight: 100
