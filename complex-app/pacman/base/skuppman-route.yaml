@@ -1,18 +1,14 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  annotations:
-  name: skuppman-9nff2
+  name: skuppman
 spec:
-  host: skuppman.sysdeseng.com
-  path: /
   port:
-    targetPort: 8080
-  subdomain: ""
+    targetPort: http
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
   to:
     kind: Service
     name: skuppman
     weight: 100
-  wildcardPolicy: None
-status:
-  ingress: []

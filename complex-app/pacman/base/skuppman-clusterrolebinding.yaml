@@ -11,4 +11,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: pacman
-  namespace: sku-pacman
+  namespace: skuppman
