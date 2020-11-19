@@ -10,5 +10,5 @@ spec:
       $setElementOrder/containers:
       - name: reverse-words
       containers:
-      - image: quay.io/mavazque/reversewords:v0.0.2
+      - image: quay.io/mavazque/reversewords:v0.0.3
         name: reverse-words
