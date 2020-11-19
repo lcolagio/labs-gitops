@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: haproxy
-  namespace: skupacman
+  namespace: skuppman
 data:
   haproxy: "#---------------------------------------------------------------------\n#
     Example configuration for a possible web application.  See the\n# full configuration
