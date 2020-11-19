@@ -1,5 +1,2 @@
 resources:
 - ../../base
-- haproxy-configmap.yaml
-- haproxy-service.yaml
-- haproxy-deployment.yaml
