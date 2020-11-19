@@ -1,14 +1,12 @@
-apiVersion: route.openshift.io/v1
 kind: Route
+apiVersion: route.openshift.io/v1
 metadata:
-  name: skuppman
+  name: pacman
 spec:
-  port:
-    targetPort: http
-  tls:
-    insecureEdgeTerminationPolicy: Redirect
-    termination: edge
   to:
     kind: Service
     name: skuppman
     weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
