@@ -4,4 +4,4 @@ metadata:
   name: operatorgroup
 spec:
   targetNamespaces:
-  - my-grafana-operator
+  - my-grafana
