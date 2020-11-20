@@ -4,3 +4,6 @@ resources:
 - namespace.yaml
 - operatorgroup.yaml
 - subscription.yaml
+- grafana.yaml
+# - grafanadatasource.yaml
+# - grafanadashboard.yaml
