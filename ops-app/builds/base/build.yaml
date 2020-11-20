@@ -1,0 +1,23 @@
+---
+apiVersion: config.openshift.io/v1
+kind: Build
+metadata:
+  name: cluster
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=false
+    release.openshift.io/create-only: "true"
+spec:
+  buildDefaults:
+    imageLabels:
+    - name: labelkey
+      value: labelvalue
+    resources:
+      limits:
+        cpu: "1"
+        memory: 3Gi
+      requests:
+        cpu: "1"
+        memory: 2Gi
+
+
+
