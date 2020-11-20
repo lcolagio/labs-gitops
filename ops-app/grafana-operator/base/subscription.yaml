@@ -2,7 +2,6 @@ apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: my-grafana-operator
-  namespace: my-grafana-operator
 spec:
   channel: alpha
   name: grafana-operator
