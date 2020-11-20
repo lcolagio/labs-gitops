@@ -5,5 +5,6 @@ resources:
 - operatorgroup.yaml
 - subscription.yaml
 - grafana.yaml
+- clusterrolebinding.yaml
 # - grafanadatasource.yaml
 # - grafanadashboard.yaml
