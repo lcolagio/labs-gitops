@@ -6,9 +6,9 @@ spec:
 #  host: reverse-words.2886795274-80-jago05.environments.katacoda.com
   port:
     targetPort: http
-  tls:
-    insecureEdgeTerminationPolicy: Redirect
-    termination: edge
+#  tls:
+#    insecureEdgeTerminationPolicy: Redirect
+#    termination: edge
   to:
     kind: Service
     name: reverse-words
