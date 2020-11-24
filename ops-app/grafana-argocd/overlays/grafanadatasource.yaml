@@ -13,7 +13,30 @@ spec:
         tlsSkipVerify: true
       name: Prometheus
       secureJsonData:
-        httpHeaderValue1: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ind5MmNuNUt2aHVKYXMxbEkwa1JhMWUyMEY4Uk9ReWZpdkhFaXpnTWtCNG8ifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJhcmdvY2QiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlY3JldC5uYW1lIjoiZ3JhZmFuYS1zZXJ2aWNlYWNjb3VudC10b2tlbi1wYncyOCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJncmFmYW5hLXNlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiODZhODY5ZjAtZjM2MC00MzY0LWE2NTAtMTc0ZWJkMjc0NWZmIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmFyZ29jZDpncmFmYW5hLXNlcnZpY2VhY2NvdW50In0.Ruk7d-vrN85G0dFXgonEDZEFx3IsBYy5RUnmrcHcGTuWiwB6JxMbRFXf3kZl06kA7st9s1yAV1iO29h92_s326WX9BjbCuYS9xWu5bM8B8NwIRe5C_EJxRdx8c4OkLLjZaFLKLxXmD7DkTvGB5Ataq8pWoiwqY3SEyKNxP-q6dpHXgAVm7RVxU-v1Wqbkt4VH1HZTYbGGd5llvzPNhphBsKInuF5RBGXTL83ex83zXkd941JmySlWHj_y_CagtVkqv4e9sKGKDgYtTAcydXNIEiob3jcTmDnURePaHix1SPa6UTJl0A2UEENVwSQ4pnt3bDgFkApthsinDslUvpBJQ'
+        httpHeaderValue1: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ind5MmNuNUt2aHVKYXMxbEkwa1JhMWUyMEY4Uk9ReWZpdkhFaXpnTWtCNG8ifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJhcmdvY2QiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlY3JldC5uYW1lIjoiZ3JhZmFuYS1zZXJ2aWNlYWNjb3VudC10b2tlbi1iZmR2MiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJncmFmYW5hLXNlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiMzY1YmFmYjAtM2IxMC00ZWY2LWJlODAtNDAzOGU1NmQxOWEwIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmFyZ29jZDpncmFmYW5hLXNlcnZpY2VhY2NvdW50In0.26GmZWxAfr-kJXI4-eNTyZHhv7xbM3a154tbvBEk9sv2lIL3dXtJe9cBfHV6IYd6R2M5sT5AwbO9YgU_fzsfBSe0UyOb-lA3bzVVsWsmLfc2wMQEOXaJEs-cLqbpkDs0Ug3gRZluRjrT-KVKeKbXbT3Vk6NbzdQCB_I62u9bo40KIwQZ5suIU-bBwXEL68um-pRtKNV6i5he3XAhIs26q0ACKVhgcYgoITYoOoVKTh6-CBa3215lbC3VuLfFCZ9LCyZxKbVSPXqX-UDYxWTJsSeg-vwpN5CTrV5iWgvQ1OzXkW2XC6Kad1e6ecr4wDW9pVokNkTS4TKhqHc8JX69ew'
+      type: prometheus
+      url: 'https://thanos-querier.openshift-monitoring.svc.cluster.local:9091'
+  name: prometheus-grafanadatasource.yaml
+
+
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDataSource
+metadata:
+  name: prometheus
+  namespace: argocd
+
+spec:
+  datasources:
+    - access: proxy
+      editable: true
+      isDefault: true
+      jsonData:
+        httpHeaderName1: 'Authorization'
+        timeInterval: 5s
+        tlsSkipVerify: true
+      name: Prometheus
+      secureJsonData:
+        httpHeaderValue1: 'Bearer ${GRAFANA_TOKEN}'
       type: prometheus
       url: 'https://thanos-querier.openshift-monitoring.svc.cluster.local:9091'
   name: prometheus-grafanadatasource.yaml
