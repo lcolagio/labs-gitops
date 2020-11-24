@@ -6,5 +6,4 @@ resources:
 # - subscription.yaml
 - grafana.yaml
 # - clusterrolebinding.yaml
-- grafanadatasource.yaml
 - grafanadashboard.yaml
