@@ -3,6 +3,6 @@ kind: Kustomization
 bases:
 - ../base
 patchesStrategicMerge:
-# Patch token datasource v1
+# Patch token datasource v2
 - grafanadatasource.yaml
 
