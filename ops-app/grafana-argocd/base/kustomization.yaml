@@ -4,7 +4,7 @@ resources:
 # - namespace.yaml
 # - operatorgroup.yaml
 # - subscription.yaml
-# 
+# -
 #
 - clusterrolebinding.yaml
 - grafana.yaml
