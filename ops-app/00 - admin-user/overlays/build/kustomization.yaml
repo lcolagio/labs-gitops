@@ -1,0 +1,6 @@
+bases:
+- ../../base
+- lapostesuperadmin.yaml
+
+patchesStrategicMerge:
+
