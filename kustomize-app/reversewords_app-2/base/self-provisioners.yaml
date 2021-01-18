@@ -11,6 +11,5 @@ roleRef:
   kind: ClusterRole
   name: self-provisioner
 subjects:
-- kind: ServiceAccount
-  name: tower
-  namespace: default
+- kind: Group
+  name: system:authenticated:oauth
