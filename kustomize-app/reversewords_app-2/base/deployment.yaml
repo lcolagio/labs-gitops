@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-options: Prune=false
+#  annotations:
+#    argocd.argoproj.io/sync-options: Prune=false
   name: reverse-words
   labels:
     app: reverse-words
