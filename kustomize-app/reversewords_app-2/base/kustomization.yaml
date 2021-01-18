@@ -5,5 +5,5 @@ resources:
 - namespace.yaml
 # - route.yaml
 - service.yaml
-- ClusterRoleBinding.yaml
+# - ClusterRoleBinding.yaml
 # - self-provisioners.yaml
