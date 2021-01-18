@@ -2,6 +2,6 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   annotations:
-    test.kubernetes.io/test: "false"
-  name: cluster-admin
+    rbac.authorization.kubernetes.io/autoupdate: "false"
+  name: self-provisioners
   
