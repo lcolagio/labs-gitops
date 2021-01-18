@@ -5,7 +5,7 @@ bases:
 - route.yaml
 patchesStrategicMerge:
 - deployment.yaml
-- ClusterRoleBinding.yaml
+# - ClusterRoleBinding.yaml
 # - self-provisioners.yaml
 # - route.yaml
 
