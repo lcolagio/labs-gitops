@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: reverse-words
 spec:
-  host: pro-reverse-words-reverse-words.apps.cluster-e675.sandbox1489.opentlc.com
+#  host: pro-reverse-words-reverse-words.apps.cluster-e675.sandbox1489.opentlc.com
   port:
     targetPort: http
   tls:

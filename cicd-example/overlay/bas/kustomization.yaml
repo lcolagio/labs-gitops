@@ -5,5 +5,5 @@ bases:
 - namespace.yaml
 patchesStrategicMerge:
 - deployment.yaml
-# - route.yaml
+- route.yaml
 
