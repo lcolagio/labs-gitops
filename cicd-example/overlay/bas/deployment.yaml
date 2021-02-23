@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: reverse-words
+  name: reverse-words
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: reverse-words
+      containers:
+      - image: quay.io/mavazque/reversewords:v0.0.3
+        name: reverse-words
